@@ -32,7 +32,7 @@ body {
     margin: 0;
 
     h2 {
-        padding: 0.5em;
+        padding: 0.2em 0 0.5em 0;
         margin: 0;
     }
 
@@ -47,7 +47,7 @@ body {
 
     .project-header:hover {
         background-color: #333333;
-    }    
+    }
 
     .project-content {
         max-height: 0;
@@ -65,7 +65,8 @@ body {
     .project-content.expanded {
         max-height: 1000px;
         padding: 2em 3em 0em 2em;
-        margin: 1em;
+        margin: 0.8em;
+        margin-bottom: 0.4em;
         margin-top: 0;
         transition: max-height 0.6s ease;
     }
@@ -97,6 +98,13 @@ body {
     }
 
     @media (max-width: 600px) {
+        .project-content.expanded {
+            padding: 1.5em 0.5em 0em 1.5em;
+            margin: 0.4em;
+            margin-bottom: 0.2em;
+            margin-top: 0;
+        }
+
         .project-details {
             flex-direction: column;
             align-items: center;
@@ -125,9 +133,9 @@ body {
     }
 
     .project-meta {
-        display: flex;             /* Use Flexbox for side-by-side layout */
-        justify-content: space-between; /* Space out the content between left and right */
-        align-items: center;       /* Align items vertically centered */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         padding: 0.5em;
         margin-top: 10px;
         font-size: 0.85em;
@@ -135,10 +143,10 @@ body {
 
         .github-link {
             font-size: 0.9em;
-            color: #1DA1F2; /* GitHub link color */
+            color: #1DA1F2;
             text-decoration: none;
         }
-        
+
         .github-link:hover {
             text-decoration: underline;
         }
