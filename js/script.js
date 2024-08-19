@@ -40,10 +40,41 @@ function prevSlide(event, carouselId) {
     showSlide(carouselId, currentIndex - 1);
 }
 
+let touchStartX = 0;
+let touchEndX = 0;
+
+function handleSwipeStart(event) {
+    touchStartX = event.changedTouches[0].screenX;
+}
+
+function handleSwipeMove(event) {
+    touchEndX = event.changedTouches[0].screenX;
+}
+
+function handleSwipeEnd(event, carouselId) {
+    if (touchEndX < touchStartX) {
+        nextSlide(event, carouselId);
+    }
+    if (touchEndX > touchStartX) {
+        prevSlide(event, carouselId);
+    }
+}
+
+
 window.onload = function() {
-    document.querySelectorAll('.dontClose').forEach(image => {
-        image.addEventListener('click', (event) => {
-            event.stopPropagation();
+    const carousels = document.querySelectorAll('.carousel');
+
+    carousels.forEach(carousel => {
+        const carouselId = carousel.getAttribute('data-carousel');
+
+        carousel.querySelectorAll('.carousel-image').forEach(image => {
+            image.addEventListener('click', (event) => {
+                event.stopPropagation(); // Prevents the project from collapsing when clicking an image
+            });
         });
+
+        carousel.addEventListener('touchstart', handleSwipeStart, false);
+        carousel.addEventListener('touchmove', handleSwipeMove, false);
+        carousel.addEventListener('touchend', (event) => handleSwipeEnd(event, carouselId), false);
     });
 };
