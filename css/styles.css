@@ -6,6 +6,11 @@ body {
     padding: 0;
 }
 
+p, u, li {
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+}
+
 .content {
     margin: 0 auto;
     max-width: 800px;
@@ -95,6 +100,12 @@ body {
         flex-basis: 50%;
         padding-left: 10px;
         text-align: left;
+
+        h4 {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
     }
 
     @media (max-width: 600px) {
@@ -140,24 +151,61 @@ body {
         margin-top: 10px;
         font-size: 0.85em;
         color: #BBBBBB;
-
-        .github-link {
-            font-size: 0.9em;
-            color: #1DA1F2;
-            text-decoration: none;
-        }
-
-        .github-link:hover {
-            text-decoration: underline;
-        }
     }
 }
 
 a {
-    color: #333;
+    font-size: 0.9em;
+    color: #1DA1F2;
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+
+.carousel {
+    position: relative;
+    max-width: 100%; /* Adjust as needed */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }

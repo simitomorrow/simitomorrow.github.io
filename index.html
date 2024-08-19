@@ -19,31 +19,101 @@
         <h2>Ongoing Projects</h2>
         <div class="project">
             <div class="project-header" onclick="toggleCategory('ongoing')">
-                <h2>blubb.io</h2>
+                <h2>Blubb.IO</h2>
                 <div class="project-content" id="ongoing">
                     <div class="project-details">
                         <div class="project-image">
-                            <img src="img/blubbio.png" alt="blubb.io gameplay image">
+                            <div class="carousel" data-carousel="carousel1">
+                                <div class="carousel-images">
+                                    <img src="img/blubbio.gif" alt="Project 1 Image 1" class="dontClose">
+                                    <img src="img/project1-2.png" alt="Project 1 Image 2" class="dontClose">
+                                    <img src="img/project1-3.png" alt="Project 1 Image 3" class="dontClose">
+                                </div>
+                                <button class="carousel-control prev" onclick="prevSlide(event, 'carousel1')">&#10094;</button>
+                                <button class="carousel-control next" onclick="nextSlide(event, 'carousel1')">&#10095;</button>
+                            </div>
                         </div>
                         <div class="project-description">
-                            <p>This is a brief description of the project. Explain what the project is about, the
-                                technologies used, and the goals.</p>
+                            <h4>Description</h4>
+                            <p>Blubb.IO is a competitive puzzle game based on Puzzle Bobble.<br>
+                                In this game, colored bubbles are shot into a grid to align three matching colors next
+                                to each other, causing them to disappear. <br><br>
+                                Blubb.io expands this concept by introducing a multiplayer mode where skillful
+                                dissolving of bubbles hinders the opponent's game instead of earning points.
+                        </div>
+                    </div>
+                    <div class="project-roles">
+                        <h4>My contributions to this project:</h4>
+                        <ul>
+                            <li>Everything about gameplay: Logic, inputhandling, visuals, balancing, stat tracking etc.</li>
+                            <li>Realtime online multiplayer</li>
+                            <li>Designed and built a physical arcademachine made of wood.</li>
+                            <li>Collaborative UI design with
+                                <a href="https://github.com/Zytronik">
+                                    Zytronik
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="project-meta">
+                        <a href="https://github.com/Zytronik/blubbio" class="github-link">
+                            View on GitHub
+                        </a>
+                        <p><small>January 2024 | Duration: 7 months</small></p>
+                        <a href="https://blubb.io/">
+                            Open Website
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project">
+            <div class="project-header" onclick="toggleCategory('asdf')">
+                <h2>Blubb.IO</h2>
+                <div class="project-content" id="asdf">
+                    <div class="project-details">
+                        <div class="project-image">
+                            <div class="carousel" data-carousel="carousel2">
+                                <div class="carousel-images">
+                                    <img src="img/blubbio.png" alt="Project 1 Image 1">
+                                    <img src="img/blubbio.gif" alt="Project 1 Image 2">
+                                    <img src="img/project1-3.png" alt="Project 1 Image 3">
+                                </div>
+                                <button class="carousel-control prev" onclick="prevSlide(event, 'carousel2')">&#10094;</button>
+                                <button class="carousel-control next" onclick="nextSlide(event, 'carousel2')">&#10095;</button>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <h4>Description</h4>
+                            <p>Blubb.IO is a competitive puzzle game based on Puzzle Bobble.<br>
+                                In this game, colored bubbles are shot into a grid to align three matching colors next
+                                to each other, causing them to disappear. <br><br>
+                                Blubb.io expands this concept by introducing a multiplayer mode where skillful
+                                dissolving of bubbles hinders the opponent's game instead of earning points.
                         </div>
                     </div>
                     <div class="project-roles">
                         <h4>My Roles in the Project:</h4>
                         <ul>
-                            <li>Designed and implemented the user interface using React.</li>
-                            <li>Integrated backend APIs with frontend components.</li>
-                            <li>Optimized performance and reduced load times by 30%.</li>
-                            <li>Collaborated with a team of 5 developers to deliver the project on time.</li>
+                            <li>Collaborative UI design with
+                                <a href="https://github.com/Zytronik">
+                                    Zytronik
+                                </a>
+                            </li>
+                            <li>Everything about gameplay: Logic, inputhandling, visuals, balancing, stat tracking etc.</li>
+                            <li>Realtime online multiplayer</li>
+                            <li>Designed and built a physical arcademachine made of wood.</li>
                         </ul>
                     </div>
                     <div class="project-meta">
-                        <a href="https://github.com/yourusername/blubbio" target="_blank" class="github-link">
+                        <a href="https://github.com/Zytronik/blubbio" class="github-link">
                             View on GitHub
                         </a>
-                        <p><small>Started: January 2023 | Duration: 6 months</small></p>
+                        <p><small>January 2024 | Duration: 7 months</small></p>
+                        <a href="https://blubb.io/">
+                            Open Website
+                        </a>
                     </div>
                 </div>
             </div>
@@ -55,7 +125,6 @@
 </html>
 <!--
 
-    blubb.io
     drone
     onebench
     beautiful bullets
