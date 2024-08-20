@@ -42,21 +42,25 @@ function prevSlide(event, carouselId) {
 
 let touchStartX = 0;
 let touchEndX = 0;
+const minSwipeDistance = 30;
 
 function handleSwipeStart(event) {
     touchStartX = event.changedTouches[0].screenX;
 }
 
-function handleSwipeMove(event) {
-    touchEndX = event.changedTouches[0].screenX;
-}
-
 function handleSwipeEnd(event, carouselId) {
-    if (touchEndX - 200 < touchStartX) {
+    touchEndX = event.changedTouches[0].screenX;
+    const swipeDistance = touchEndX - touchStartX;
+    console.log(swipeDistance);
+    if (swipeDistance < -minSwipeDistance) {
         nextSlide(event, carouselId);
-    }
-    if (touchEndX + 200 > touchStartX) {
+    } else if (swipeDistance > minSwipeDistance) {
         prevSlide(event, carouselId);
+    } else {
+        const targetImage = event.target.closest('.carousel-image');
+        if (targetImage) {
+            openImagePopup(targetImage.src);
+        }
     }
 }
 
@@ -80,7 +84,6 @@ window.onload = function() {
         });
 
         carousel.addEventListener('touchstart', handleSwipeStart, false);
-        carousel.addEventListener('touchmove', handleSwipeMove, false);
         carousel.addEventListener('touchend', (event) => handleSwipeEnd(event, carouselId), false);
     });
 
@@ -89,7 +92,7 @@ window.onload = function() {
     });
 
     popup.addEventListener('click', function(event) {
-        if (event.target !== popupImage) { // Ensure clicking outside the image closes the popup
+        if (event.target !== popupImage) {
             popup.style.display = "none";
         }
     });
