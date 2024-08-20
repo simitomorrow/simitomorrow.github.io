@@ -35,6 +35,7 @@ p, u, li {
 
 .project {
     margin: 0;
+    margin-bottom: 2em;
 
     h2 {
         padding: 0.2em 0 0.5em 0;

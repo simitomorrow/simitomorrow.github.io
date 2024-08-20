@@ -52,10 +52,10 @@ function handleSwipeMove(event) {
 }
 
 function handleSwipeEnd(event, carouselId) {
-    if (touchEndX - 30 < touchStartX) {
+    if (touchEndX - 50 < touchStartX) {
         nextSlide(event, carouselId);
     }
-    if (touchEndX + 30 > touchStartX) {
+    if (touchEndX + 50 > touchStartX) {
         prevSlide(event, carouselId);
     }
 }
