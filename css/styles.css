@@ -6,7 +6,11 @@ body {
     padding: 0;
 }
 
-p, u, li {
+h4 {
+    font-size: 1.1em;
+}
+
+h4, p, u, li {
     line-height: 1.4;
     letter-spacing: 0.01em;
 }
@@ -21,6 +25,10 @@ p, u, li {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+
+    a {
+        color: #fff;
+    }
 
     h1 {
         padding: 0;
@@ -80,7 +88,6 @@ p, u, li {
     .project-details {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
         margin-bottom: 15px;
         flex-wrap: wrap;
     }
@@ -88,8 +95,11 @@ p, u, li {
     .project-image {
         flex-basis: 47%;
         flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        img {
+        img, video {
             width: 100%;
             height: auto;
             max-height: 300px;
@@ -182,12 +192,12 @@ a:hover {
 .carousel-images {
     display: flex;
     transition: transform 0.5s ease;
-}
 
-.carousel-images img {
-    width: 100%;
-    flex-shrink: 0;
-    object-fit: cover;
+    img, video {
+        width: 100%;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
 }
 
 .carousel-control {

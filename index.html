@@ -12,26 +12,30 @@
 <body>
     <div class="content">
         <div class="profile">
-            <h1>simitomorrow</h1>
+            <h1><a href="https://github.com/simitomorrow" target="_blank">simitomorrow</a></h1>
             <p>Software Engineer with a love for webgames</p>
         </div>
 
         <h2>Ongoing Projects</h2>
         <div class="project">
-            <div class="project-header" onclick="toggleCategory('ongoing')">
+            <div class="project-header" onclick="toggleCategory('blubb')">
                 <h2>blubb.io</h2>
-                <div class="project-content" id="ongoing">
+                <div class="project-content" id="blubb">
                     <div class="project-details">
                         <div class="project-image">
                             <div class="carousel" data-carousel="carousel1">
                                 <div class="carousel-images">
                                     <img src="img/blubbio/blubbio.gif" alt="Gameplay" class="carousel-image">
                                     <img src="img/blubbio/blubbio.png" alt="Multiplayer" class="carousel-image">
-                                    <img src="img/blubbio/arcademachine.png" alt="Arcademachine BP" class="carousel-image">
-                                    <img src="img/blubbio/arcademachine2.jpg" alt="Arcademachine Built" class="carousel-image">
+                                    <img src="img/blubbio/arcademachine.png" alt="Arcademachine BP"
+                                        class="carousel-image">
+                                    <img src="img/blubbio/arcademachine2.jpg" alt="Arcademachine Built"
+                                        class="carousel-image">
                                 </div>
-                                <button class="carousel-control prev" onclick="prevSlide(event, 'carousel1')">&#10094;</button>
-                                <button class="carousel-control next" onclick="nextSlide(event, 'carousel1')">&#10095;</button>
+                                <button class="carousel-control prev"
+                                    onclick="prevSlide(event, 'carousel1')">&#10094;</button>
+                                <button class="carousel-control next"
+                                    onclick="nextSlide(event, 'carousel1')">&#10095;</button>
                             </div>
                         </div>
                         <div class="project-description">
@@ -40,28 +44,30 @@
                                 In this game, colored bubbles are shot into a grid to align three matching colors next
                                 to each other, causing them to disappear. <br><br>
                                 blubb.io expands this concept by introducing a multiplayer mode where skillful
-                                dissolving of bubbles hinders the opponent's game instead of earning points.
+                                dissolving of bubbles hinders the opponent's game instead of earning points.<br><br>
+                                Built with Vue.js, NestJS and Prisma.io
                         </div>
                     </div>
                     <div class="project-roles">
                         <h4>My contributions to this project:</h4>
                         <ul>
-                            <li>Everything about gameplay: Logic, inputhandling, visuals, balancing, stat tracking etc.</li>
+                            <li>Everything about gameplay: Logic, inputhandling, visuals, balancing, stat tracking etc.
+                            </li>
                             <li>Realtime online multiplayer</li>
                             <li>Designed and built a physical arcademachine made of wood.</li>
                             <li>Collaborative UI and menu design with
-                                <a href="https://github.com/Zytronik">
+                                <a href="https://github.com/Zytronik" target="_blank">
                                     Zytronik
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="project-meta">
-                        <a href="https://github.com/Zytronik/blubbio" class="github-link">
+                        <a href="https://github.com/Zytronik/blubbio" class="github-link" target="_blank">
                             View on GitHub
                         </a>
                         <p><small>January 2024 | Duration: 7 months</small></p>
-                        <a href="https://blubb.io/">
+                        <a href="https://blubb.io/" target="_blank">
                             Open Website
                         </a>
                     </div>
@@ -70,8 +76,199 @@
         </div>
 
         <h2>Past Projects</h2>
+        <div class="project">
+            <div class="project-header" onclick="toggleCategory('drone')">
+                <h2>Drone</h2>
+                <div class="project-content" id="drone">
+                    <div class="project-details">
+                        <div class="project-image">
+                            <div class="carousel" data-carousel="carousel2">
+                                <div class="carousel-images">
+                                    <img src="img/drone/drone1.PNG" alt="Drone Image" class="carousel-image">
+                                    <video src="img/drone/drone2.webm" alt="Gameplay Video" class="carousel-image"
+                                        controls></video>
+                                    <img src="img/drone/drone3.PNG" alt="Combat Hitbox" class="carousel-image">
+                                </div>
+                                <button class="carousel-control prev"
+                                    onclick="prevSlide(event, 'carousel2')">&#10094;</button>
+                                <button class="carousel-control next"
+                                    onclick="nextSlide(event, 'carousel2')">&#10095;</button>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <h4>Description</h4>
+                            <p>Drone aspired to be an isometric roguelike game fused with factory-building elements.
+                                <br>
+                                This project was part of our bachelor's studies,
+                                where all 11 participants surprisingly agreed to work on a single game.
+                                This posed a unique challenge in managing a larger team,
+                                but it also allowed us to achieve far more within the short span of 7 weeks.<br><br>
+
+                                Built with Unity, Blender, and Substance Painter.
+                        </div>
+                    </div>
+                    <div class="project-roles">
+                        <h4>My contributions to this project:</h4>
+                        <ul>
+                            <li>Functionality of the main character: Movement & Animations</li>
+                            <li>Input handling and preparatory code work for other teams</li>
+                            <li>Combat design and isometric camera</li>
+                        </ul>
+                    </div>
+                    <div class="project-meta">
+                        <a href="https://github.com/haebel7/HS23-DiPro-Game-Trends" class="github-link" target="_blank">
+                            View on GitHub
+                        </a>
+                        <p><small>September 2023 | Duration: 7 weeks</small></p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-header" onclick="toggleCategory('titanic')">
+                <h2>Did you survive the titanic?</h2>
+                <div class="project-content" id="titanic">
+                    <div class="project-details">
+                        <div class="project-image">
+                            <div class="carousel" data-carousel="carousel3">
+                                <div class="carousel-images">
+                                    <img src="img/titanic/titanic1.png" alt="Did you survive the titanic?"
+                                        class="carousel-image">
+                                    <img src="img/titanic/titanic2.png" alt="Ship on it's way" class="carousel-image">
+                                    <img src="img/titanic/titanic3.png" alt="You Survived!" class="carousel-image">
+                                </div>
+                                <button class="carousel-control prev"
+                                    onclick="prevSlide(event, 'carousel3')">&#10094;</button>
+                                <button class="carousel-control next"
+                                    onclick="nextSlide(event, 'carousel3')">&#10095;</button>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <h4>Description</h4>
+                            <p>This project was part of an AI and machine learning course,
+                                where we were tasked with creating an interactive media project utilizing available AI
+                                technology. <br>
+                                I came up with the idea to visualize a rather absurd Kaggle challenge:
+                                letting an AI predict whether or not a passenger survived the Titanic.<br><br>
+
+                                Built with plain HTML, CSS, JS and tensorflow library scikit.js
+                        </div>
+                    </div>
+                    <div class="project-roles">
+                        <h4>My contributions to this project:</h4>
+                        <ul>
+                            <li>AI algorithm experimentation</li>
+                            <li>Backend data preparation for the Naive Bayes algorithm</li>
+                            <li>Collaborative UI design with
+                                <a href="https://github.com/Zytronik" target="_blank">
+                                    Zytronik
+                                </a>
+                            </li>
+                            <li>Project documentation</li>
+                        </ul>
+                    </div>
+                    <div class="project-meta">
+                        <a href="https://github.com/simitomorrow/DidYouSurviveTheTitanic" class="github-link"
+                            target="_blank">
+                            View on GitHub
+                        </a>
+                        <p><small>April 2023 | Duration: 2 weeks</small></p>
+                        <a href="http://michelsimon.ch/didyousurvivethetitanic/" target="_blank">
+                            Open Website
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-header" onclick="toggleCategory('cg')">
+                <h2>Generative Computer Graphics</h2>
+                <div class="project-content" id="cg">
+                    <div class="project-details">
+                        <div class="project-image">
+                            <div class="carousel" data-carousel="carousel4">
+                                <div class="carousel-images">
+                                    <img src="img/cg/cg1.gif" alt="Clockwork Animation" class="carousel-image">
+                                    <img src="img/cg/cg2.png" alt="Bauhaus Inspired" class="carousel-image">
+                                    <img src="img/cg/cg3.png" alt="Singing Robot" class="carousel-image">
+                                    <img src="img/cg/cg4.gif" alt="Bubble Foam Animation" class="carousel-image">
+                                </div>
+                                <button class="carousel-control prev"
+                                    onclick="prevSlide(event, 'carousel4')">&#10094;</button>
+                                <button class="carousel-control next"
+                                    onclick="nextSlide(event, 'carousel4')">&#10095;</button>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <h4>Description</h4>
+                            <p>
+                                These are a selection of various computer-generated graphics. <br>
+                                Throughout our studies, we had the opportunity to create images using a range of coding
+                                techniques,
+                                exploring different topics and themes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <h2>Other Work</h2>
+        <div class="project">
+            <div class="project-header" onclick="toggleCategory('ta')">
+                <h2>Teaching Assistance</h2>
+                <div class="project-content" id="ta">
+                    <div class="project-details">
+                        <div class="project-image">
+                            <img src="img/other/math.jpg" alt="Math Thumbnail" class="carousel-image">
+                        </div>
+                        <div class="project-description">
+                            <h4>Description</h4>
+                            <p>
+                                During my civil service and studies, I gave lectures as a teaching assistant.<br>
+                                My topics at university were Linear Algebra and Object-Oriented Programming.<br>
+                                At the secondary school level, I primarily taught beginner-level computer science and
+                                various other subjects.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="project">
+        <div class="project-header" onclick="toggleCategory('other')">
+            <h2>Event Infrastructure</h2>
+            <div class="project-content" id="other">
+                <div class="project-details">
+                    <div class="project-image">
+                        <div class="carousel" data-carousel="carousel5">
+                            <div class="carousel-images">
+                                <img src="img/other/polyball.jpg" alt="Polyball Flyer" class="carousel-image">
+                                <img src="img/other/switzerlan.jpg" alt="SwitzerLAN Logo" class="carousel-image">
+                                <img src="img/other/musiktag.jpg" alt="Solothurner Musiktage" class="carousel-image">
+                            </div>
+                            <button class="carousel-control prev"
+                                onclick="prevSlide(event, 'carousel5')">&#10094;</button>
+                            <button class="carousel-control next"
+                                onclick="nextSlide(event, 'carousel5')">&#10095;</button>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <h4>Description</h4>
+                        <p>
+                            As a freelancer and on other occasions, I enjoy helping out at events.<br>
+                            This includes logistics for beverages, seating, desks, and cables for LAN parties,
+                            as well as other organizational duties as needed. <br><br>
+                            I have helped at SwitzerLAN, ETH's Polyball, local music events, and more.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="imagePopup" class="popup" style="display:none;">
@@ -81,16 +278,8 @@
 </body>
 
 </html>
+
 <!--
-
-    drone
-    onebench
-    beautiful bullets
-    didyousurvivethetitanic
-    generative design
-    alchemy
-    fire emblem
-
     other work
     teaching assistant
      -  HSLU
@@ -99,8 +288,5 @@
      -  fantasy basel booth
      -  polyball
      -  switzerlan
-
     fullstack developer - postfinance.ch
-
-  
 -->

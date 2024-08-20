@@ -10,7 +10,7 @@ function toggleCategory(id) {
 function showSlide(carouselId, index) {
     const carousel = document.querySelector(`[data-carousel="${carouselId}"]`);
     const slides = carousel.querySelector('.carousel-images');
-    const totalSlides = carousel.querySelectorAll('.carousel-images img').length;
+    const totalSlides = carousel.querySelectorAll('.carousel-images img, .carousel-images video').length;
     let currentIndex = parseInt(carousel.getAttribute('data-current-index')) || 0;
 
     if (index >= totalSlides) {
@@ -51,7 +51,6 @@ function handleSwipeStart(event) {
 function handleSwipeEnd(event, carouselId) {
     touchEndX = event.changedTouches[0].screenX;
     const swipeDistance = touchEndX - touchStartX;
-    console.log(swipeDistance);
     if (swipeDistance < -minSwipeDistance) {
         nextSlide(event, carouselId);
     } else if (swipeDistance > minSwipeDistance) {
