@@ -52,10 +52,10 @@ function handleSwipeMove(event) {
 }
 
 function handleSwipeEnd(event, carouselId) {
-    if (touchEndX < touchStartX) {
+    if (touchEndX - 30 < touchStartX) {
         nextSlide(event, carouselId);
     }
-    if (touchEndX > touchStartX) {
+    if (touchEndX + 30 > touchStartX) {
         prevSlide(event, carouselId);
     }
 }
@@ -63,18 +63,34 @@ function handleSwipeEnd(event, carouselId) {
 
 window.onload = function() {
     const carousels = document.querySelectorAll('.carousel');
+    const popup = document.getElementById('imagePopup');
+    const popupImage = document.getElementById('popupImage');
 
     carousels.forEach(carousel => {
         const carouselId = carousel.getAttribute('data-carousel');
 
         carousel.querySelectorAll('.carousel-image').forEach(image => {
             image.addEventListener('click', (event) => {
-                event.stopPropagation(); // Prevents the project from collapsing when clicking an image
+                event.stopPropagation();
+                const popup = document.getElementById('imagePopup');
+                const popupImage = document.getElementById('popupImage');
+                popup.style.display = "block";
+                popupImage.src = event.target.src;
             });
         });
 
         carousel.addEventListener('touchstart', handleSwipeStart, false);
         carousel.addEventListener('touchmove', handleSwipeMove, false);
         carousel.addEventListener('touchend', (event) => handleSwipeEnd(event, carouselId), false);
+    });
+
+    document.getElementById('popup-close').addEventListener('click', function() {
+        popup.style.display = "none";
+    });
+
+    popup.addEventListener('click', function(event) {
+        if (event.target !== popupImage) { // Ensure clicking outside the image closes the popup
+            popup.style.display = "none";
+        }
     });
 };
